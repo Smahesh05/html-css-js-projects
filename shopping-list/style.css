@@ -1,0 +1,71 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, sans-serif;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.form-control {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-control:focus {
+  outline: none;
+  border: 1px solid gray;
+}
+
+.btn-dark {
+  padding: 7px 15px;
+  background-color: rgb(41, 37, 37);
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  width: 100px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-dark:hover {
+  transform: scale(0.98);
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  gap: 10px;
+  margin: auto;
+  max-width: 500px;
+}
+li {
+  border: 1px solid lightgray;
+  padding: 5px 15px;
+  display: flex;
+  border-radius: 4px;
+  justify-content: space-between;
+}
+
+.btn-delete {
+  cursor: pointer;
+  color: red;
+}
+.shopping-list-container {
+  margin-top: 20px;
+}
+
+.btn-filter {
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
