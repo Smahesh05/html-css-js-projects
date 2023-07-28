@@ -16,7 +16,8 @@ $("#formaction").validate({
       minlength: "2 char",
     },
     email: "please enter valid email",
-    email: "please enter valid Phone Number",
+    userName: "Please valid userName",
+    phone: "please enter valid Phone Number",
   },
   submitHandler: function (form) {
     form.submit();
