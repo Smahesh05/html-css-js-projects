@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🔒 Generate Random Password</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div>
+          <h1>
+            Generate a <br />
+            <span class="random_tag"> random password</span>
+          </h1>
+          <p>Never use an insecure password again.</p>
+        </div>
+        <button id="passBtn" class="btn">Generate password</button>
+        <div class="horizontal_line"></div>
+        <div class="input-wrapper">
+          <div id="passwordText"></div>
+          <i class="fa fa-copy"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer">Made with Smahesh05 💖</div>
+    <script>
+      const characters = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "~",
+        "`",
+        "!",
+        "@",
+        "#",
+        "$",
+        "%",
+        "^",
+        "&",
+        "*",
+        "(",
+        ")",
+        "_",
+        "-",
+        "+",
+        "=",
+        "{",
+        "[",
+        "}",
+        "]",
+        ",",
+        "|",
+        ":",
+        ";",
+        "<",
+        ">",
+        ".",
+        "?",
+        "/",
+      ];
+      const btnEl = document.getElementById("passBtn");
+      const inputEl = document.getElementById("passwordText");
+      let passLength = 12;
+
+      function getRandomCharacter() {
+        const character = Math.floor(Math.random() * characters.length);
+        return characters[character];
+      }
+
+      function getRandomPassword() {
+        let randomPassword = "";
+
+        for (let i = 0; i < passLength; i++) {
+          randomPassword += getRandomCharacter();
+        }
+        inputEl.textContent = randomPassword;
+      }
+      btnEl.addEventListener("click", getRandomPassword);
+
+      function copyPasswordToClipboard() {
+        const password = inputEl.textContent;
+        navigator.clipboard.writeText(password);
+        alert("Password copied to clipboard: " + password);
+      }
+
+      const copyIcon = document.querySelector(".fa-copy");
+      copyIcon.addEventListener("click", copyPasswordToClipboard);
+    </script>
+  </body>
+</html>
