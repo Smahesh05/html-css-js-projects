@@ -8,7 +8,7 @@ function convertTemperature(temp, unit) {
 function errorCondition() {}
 
 const formEl = document.getElementById("weatherForm");
-const apiKey = "1d9f62e628091d7c340796e75df7b71c";
+const apiKey = process.env.API_KEY;
 const geoLocationButtonEl = document.getElementById("geoLocationButton");
 const unitSelectEl = document.getElementById("unitSelect");
 const weatherFormEl = document.getElementById("weatherForm");
