@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Employee Database management</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1>Employee Database management</h1>
+        <button class="btn createEmployee">Add Employee</button>
+      </header>
+      <div class="employees">
+        <div class="employee_names">
+          <span class="employee__name-title">Employee list</span>
+          <div class="employee__name-list"></div>
+        </div>
+        <div class="employee__single">
+          <span class="employee__single-title">mahesh</span>
+          <div class="employee__single-info"></div>
+        </div>
+      </div>
+
+      <div class="addEmployee">
+        <form class="addEmployee__create">
+          Add a new Model
+          <div>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <input
+            type="text"
+            name="imageUrl"
+            placeholder="Image URL (Optional)"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="number"
+            name="contactNumber"
+            id="contactNumber"
+            placeholder="Contact"
+            required
+          />
+          <input
+            type="number"
+            name="salary"
+            id="salary"
+            placeholder="Salary"
+            required
+          />
+          <input type="text" name="address" placeholder="Address" required />
+          <input
+            type="date"
+            name="dob"
+            id="dob"
+            placeholder="Date of Birth"
+            class="addEmployee_create--dob"
+            required
+          />
+          <input
+            type="submit"
+            class="addEmployee_create--submit"
+            value="Submit"
+          />
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

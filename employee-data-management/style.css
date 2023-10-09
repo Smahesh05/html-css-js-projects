@@ -1,0 +1,146 @@
+:root {
+  --btn: #dbdbdb;
+  --btn-hover: #cacaca;
+  --item-bg: #f0f0f0;
+  --modal-bg: rgba(141, 141, 141, 0.541);
+}
+body {
+  font-family: sans-serif;
+  padding: 0 10px;
+}
+
+#app {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.createEmployee {
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.employees {
+  max-width: 900px;
+  margin: 10px auto;
+  display: flex;
+}
+
+.employees > div {
+  border: 1px solid black;
+  overflow-y: scroll;
+  height: 400px;
+}
+
+.employee__single {
+  width: 70%;
+}
+
+.employee__names {
+  width: 30%;
+}
+
+.employee__single,
+.employee_names {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.employee__single-title,
+.employee__name-title {
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+.employee__name-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.employee__names-item {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 0px 5px;
+  border: 1px solid rgb(148, 144, 144);
+}
+
+.employee__single-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.employee__single-info img {
+  width: 150px;
+}
+
+.addEmployee {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--modal-bg);
+}
+.addEmployee__create {
+  width: 400px;
+  background-color: white;
+  box-shadow: 0 0 50px grey;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.addEmployee__create > div {
+  display: grid;
+  grid-template-columns: 48.1% 48.1%;
+  column-gap: 15px;
+}
+.addEmployee__create input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(236, 236, 236);
+}
+
+/* removes arrows from input type='number' */
+.addEmployee__create input::-webkit-outer-spin-button,
+.addEmployee__create input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.addEmployee_create--submit {
+  padding: 10px !important;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--btn);
+  cursor: pointer;
+}
+.addEmployee_create--submit:hover {
+  background-color: var(--btn-hover);
+}
+
+/* edit employeee style */
+
+.editEmployee {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
