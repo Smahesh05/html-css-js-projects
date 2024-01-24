@@ -18,7 +18,7 @@ Welcome to the Calculator Web App! This simple calculator allows users to perfor
 
 ## Demo:
 
-You can try the calculator app live at ([https://calc.yourdomain.com](https://calculator-htmlcssjs-app.netlify.app/)).
+You can try the calculator app live at ([https://calculator-htmlcssjs-app.com](https://calculator-htmlcssjs-app.netlify.app/)).
 
 ## Technologies Used:
 
