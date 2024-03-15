@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin,latin-ext,vietnamese"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:regular,italic,700,700italic&amp;subset=latin,latin-ext"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script defer src="./app.js"></script>
+    <title>Company Website</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="go-to-top" id="scrollTopBtn"></div>
+    <div class="header">
+      <img
+        class="modest"
+        src="images/modest.png"
+        alt=""
+        width="99"
+        height="19"
+      />
+      <button class="toggle-menu" onclick="toggleMenu()">&#9776;</button>
+      <ul class="header__items_list" id="headerItemsList">
+        <li class="header__item">
+          <a href="#home" onclick="activateListItem(this)">HOME</a>
+        </li>
+        <li class="header__item">
+          <a href="#about" class="anchor" onclick="activateListItem(this)"
+            >ABOUT</a
+          >
+        </li>
+        <li class="header__item">
+          <a href="#work" class="anchor" onclick="activateListItem(this)"
+            >WORK</a
+          >
+        </li>
+        <li class="header__item">
+          <a href="#team" class="anchor" onclick="activateListItem(this)"
+            >TEAM</a
+          >
+        </li>
+        <li class="header__item">
+          <a href="#services" class="anchor" onclick="activateListItem(this)"
+            >SERVICES</a
+          >
+        </li>
+        <li class="header__item">
+          <a href="#features" class="anchor" onclick="activateListItem(this)"
+            >FEATURES</a
+          >
+        </li>
+        <li class="header__item">
+          <a href="#contact" class="anchor" onclick="activateListItem(this)"
+            >CONTACT</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- banner section -->
+
+    <div class="banner" id="home">
+      <div class="banner__content">
+        <div class="welcome-text">
+          <div class="banner-welcome-text">
+            <p class="banner-welcome-text-heading">
+              welcome to our marketplace
+            </p>
+            <p class="text-29">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi
+              metus, tristique ndolor<br />non, ornare sagittis dolor. Nulla
+              vestibulu lacus ...
+            </p>
+          </div>
+          <div class="btns match-height group">
+            <div class="view-more">view more</div>
+            <div class="video-tour">video tour</div>
+          </div>
+        </div>
+        <div class="pagination group">
+          <div class="layer"></div>
+          <div class="layer-2"></div>
+          <div class="layer-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about group" id="about">
+      <div class="l-unconstrained">
+        <div class="l-unconstrained-4">
+          <div class="section-title-3 group">
+            <div class="border-left-3"></div>
+            <p class="text-13">we are modest.</p>
+          </div>
+          <div class="container group">
+            <div class="col-3">
+              <div class="our-mission">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                nisi metus, tristique ndolor non, ornare sagittis dolor. Nulla
+                vestibulu lacus sed molestie gravida. Crferm entum
+                &nbsp;quismagna congue, vel sodales arcu vestibulum. Nunc
+                lobortis dui magna, quis lacusullamcorper at.
+                <br />
+                <span class="text-style">&nbsp;</span>
+                <br />Phasellus sollicitudin ante eros ornare,
+                <strong class="fw700">sit amet luctus lorem semper</strong>.
+                Suspendisse posuere, quamdictum consectetur, augue metus
+                pharetra tellus, eu feugiatloreg egetnisi. Cras ornare bibendum
+                ante, ut bibendum odio convallis eget. vel sodales arcu
+                vestibulum
+              </div>
+              <div class="social-icons-2 match-height group">
+                <div class="facebook-2">
+                  <img
+                    class="f-2 x"
+                    src="images/F.png"
+                    alt="F"
+                    width="13"
+                    height="23"
+                    title="F"
+                  />
+                </div>
+                <div class="twitter-2">
+                  <img
+                    class="l-2 x"
+                    src="images/L.png"
+                    alt="L"
+                    width="22"
+                    height="18"
+                    title="L"
+                  />
+                </div>
+                <div class="google-plus hover">
+                  <img
+                    class="g x"
+                    src="images/g.png"
+                    alt="g"
+                    width="13"
+                    height="23"
+                    title="g"
+                  />
+                </div>
+                <div class="dribbble">
+                  <img
+                    class="d x"
+                    src="images/D.png"
+                    alt="D"
+                    width="22"
+                    height="22"
+                    title="D"
+                  />
+                </div>
+                <div class="behance">
+                  <img
+                    class="e x"
+                    src="images/e.png"
+                    alt="e"
+                    width="27"
+                    height="17"
+                    title="e"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="our-goals group">
+              <div class="article group">
+                <div class="number">01</div>
+                <div class="text-16">
+                  <p class="text-17">Dedication to the customers</p>
+                  <p class="text-18">
+                    Integer vel lacus non dui ullamcorper venenatis. Aliquam
+                    vitae tristique nisi, vitae ullamcorper risus. Nam porttitor
+                    blandit ultricies.
+                  </p>
+                </div>
+              </div>
+              <div class="article-2 group">
+                <div class="number-2">02</div>
+                <div class="text-20">
+                  <p class="text-21">working closely with our clients</p>
+                  <p class="text-22">
+                    Sed blandit nisi urna, sed pellentesque enim consectetur
+                    vitae. Suspendisse ut vehicula nibh.
+                  </p>
+                </div>
+              </div>
+              <div class="article-3 group">
+                <div class="number-3">03</div>
+                <div class="text-24">
+                  <p class="text-25">increase happiness</p>
+                  <p class="text-26">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nulla eleifend laoreet euismod.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sep"></div>
+    </div>
+
+    <!-- Meet the Team -->
+
+    <div class="our-team group" id="team">
+      <div class="section-title-2 group">
+        <div class="border-left-2"></div>
+        <p class="text-4">meet the team.</p>
+      </div>
+
+      <div class="team-member-list">
+        <div class="team-member group">
+          <!-- hoverlay effect -->
+
+          <div class="base-holder">
+            <div class="hover-overlay">
+              <div class="social-icons match-height group">
+                <div class="twitter">
+                  <img
+                    class="l x"
+                    src="images/l.png"
+                    alt="L"
+                    width="17"
+                    height="14"
+                    title="L"
+                  />
+                </div>
+                <div class="facebook">
+                  <img
+                    class="f x"
+                    src="images/f.png"
+                    alt="F"
+                    width="10"
+                    height="18"
+                    title="F"
+                  />
+                </div>
+                <div class="linkedin">
+                  <img
+                    class="i x"
+                    src="images/I.png"
+                    alt="I"
+                    width="15"
+                    height="16"
+                    title="I"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- hovelay effect end -->
+          <img class="base" src="images/base_7.png" alt="" />
+          <div class="member-info">
+            <p class="text-5">Gloria Bromley</p>
+            <p class="text-6">CEO and Founder</p>
+          </div>
+        </div>
+
+        <div class="team-member-3 team-member">
+          <!-- hoverlay effect -->
+
+          <div class="base-holder">
+            <div class="hover-overlay">
+              <div class="social-icons match-height group">
+                <div class="twitter">
+                  <img
+                    class="l x"
+                    src="images/l.png"
+                    alt="L"
+                    width="17"
+                    height="14"
+                    title="L"
+                  />
+                </div>
+                <div class="facebook">
+                  <img
+                    class="f x"
+                    src="images/f.png"
+                    alt="F"
+                    width="10"
+                    height="18"
+                    title="F"
+                  />
+                </div>
+                <div class="linkedin">
+                  <img
+                    class="i x"
+                    src="images/I.png"
+                    alt="I"
+                    width="15"
+                    height="16"
+                    title="I"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- hovelay effect end -->
+          <img class="base-2" src="images/pic (1).png" alt="" />
+          <div class="member-info-3 member-info">
+            <p class="text-9">Judith Gillette</p>
+            <p class="text-10">Graphic Desinger</p>
+          </div>
+        </div>
+        <div class="team-member-4 team-member">
+          <!-- hoverlay effect -->
+
+          <div class="base-holder">
+            <div class="hover-overlay">
+              <div class="social-icons match-height group">
+                <div class="twitter">
+                  <img
+                    class="l x"
+                    src="images/l.png"
+                    alt="L"
+                    width="17"
+                    height="14"
+                    title="L"
+                  />
+                </div>
+                <div class="facebook">
+                  <img
+                    class="f x"
+                    src="images/f.png"
+                    alt="F"
+                    width="10"
+                    height="18"
+                    title="F"
+                  />
+                </div>
+                <div class="linkedin">
+                  <img
+                    class="i x"
+                    src="images/I.png"
+                    alt="I"
+                    width="15"
+                    height="16"
+                    title="I"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- hovelay effect end -->
+          <img class="base-3" src="images/pic.png" alt="" />
+          <div class="member-info-4 member-info">
+            <p class="text-11">Delores Reed</p>
+            <p class="text-12">Client Service Director</p>
+          </div>
+        </div>
+        <div class="team-member-2 team-member">
+          <!-- hoverlay effect -->
+
+          <div class="base-holder">
+            <div class="hover-overlay">
+              <div class="social-icons match-height group">
+                <div class="twitter">
+                  <img
+                    class="l x"
+                    src="images/l.png"
+                    alt="L"
+                    width="17"
+                    height="14"
+                    title="L"
+                  />
+                </div>
+                <div class="facebook">
+                  <img
+                    class="f x"
+                    src="images/f.png"
+                    alt="F"
+                    width="10"
+                    height="18"
+                    title="F"
+                  />
+                </div>
+                <div class="linkedin">
+                  <img
+                    class="i x"
+                    src="images/I.png"
+                    alt="I"
+                    width="15"
+                    height="16"
+                    title="I"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- hovelay effect end -->
+          <img class="base" src="images/base_7.png" alt="" />
+          <div class="member-info-2 member-info">
+            <p class="text-7">Paul Torres</p>
+            <p class="text-8">Head of Development</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meet Team Content End  -->
+
+    <!-- Lovely Work -->
+
+    <div class="work" id="work">
+      <div class="l-constrained-3">
+        <div class="section-title-2">
+          <div class="border-left-2"></div>
+          <p class="text">lovely work.</p>
+        </div>
+        <div class="row-6">
+          <div class="image-container">
+            <div class="base-holder">
+              <div class="hover-overlay">
+                <div class="plus">+</div>
+                <div class="title">
+                  <div class="text-2">
+                    <p>partnership guidelines</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <img
+              class="bg"
+              src="images/pic (3).png"
+              alt=""
+              width="200"
+              height="400"
+            />
+          </div>
+
+          <div class="image-container">
+            <div class="base-holder">
+              <div class="hover-overlay">
+                <div class="plus">+</div>
+                <div class="title">
+                  <div class="text-2">
+                    <p>partnership guidelines</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="bg" src="images/pic (4).png" alt="" />
+          </div>
+
+          <div class="image-container">
+            <div class="base-holder">
+              <div class="hover-overlay">
+                <div class="plus">+</div>
+                <div class="title">
+                  <div class="text-2">
+                    <p>partnership guidelines</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="bg" src="images/pic (5).png" alt="" />
+          </div>
+
+          <!-- image container 3 -->
+
+          <div class="image-container">
+            <div class="base-holder">
+              <div class="hover-overlay">
+                <div class="plus">+</div>
+                <div class="title">
+                  <div class="text-2">
+                    <p>partnership guidelines</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="bg" src="images/pic (6).png" alt="" />
+          </div>
+
+          <!--  -->
+
+          <!-- image container 4 -->
+          <div class="image-container">
+            <div class="base-holder">
+              <div class="hover-overlay">
+                <div class="plus">+</div>
+                <div class="title">
+                  <div class="text-2">
+                    <p>partnership guidelines</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="bg" src="images/pic (7).png" alt="" />
+          </div>
+
+          <!--  -->
+          <div class="image-container">
+            <div class="base-holder">
+              <div class="hover-overlay">
+                <div class="plus">+</div>
+                <div class="title">
+                  <div class="text-2">
+                    <p>partnership guidelines</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="bg" src="images/pic (8).png" alt="" />
+          </div>
+
+          <!--  -->
+        </div>
+        <div class="row-4 group">
+          <div class="col-10">
+            <div class="show-more">show me more</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+
+    <!-- What We Do -->
+    <div class="parent-services-2" id="services">
+      <div class="services-2">
+        <div class="section-title group">
+          <div class="border-left"></div>
+          <p class="text-13">what we do.</p>
+        </div>
+        <div class="service-items-list">
+          <div class="service-item service-item-2">
+            <img
+              class="cogs service-icon"
+              src="images/cogs.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+            <p class="text-33">Easy theme Setup</p>
+            <p class="text-34">
+              Nunc mattis lorem in leo lobortis, ut venenatis justo commodo.
+              Maecenas a justo nec velit egestas fermentum.
+            </p>
+          </div>
+          <div class="service-item service-item-3">
+            <img
+              class="cogs-copy service-icon"
+              src="images/cogs.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+            <p class="text-33">Easy theme Setup</p>
+            <p class="text-34">
+              Nunc mattis lorem in leo lobortis, ut venenatis justo commodo.
+              Maecenas a justo nec velit egestas fermentum.
+            </p>
+          </div>
+          <div class="service-item service-item-4">
+            <img
+              class="pencil service-icon"
+              src="images/pencil.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+            <p class="text-33">pixel perfect design</p>
+            <p class="text-34">
+              Nunc mattis lorem in leo lobortis, ut venenatis justo commodo.
+              Maecenas a justo nec velit egestas fermentum.
+            </p>
+          </div>
+          <div class="service-item service-item-5">
+            <img
+              class="pencil-copy service-icon"
+              src="images/pencil.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+            <p class="text-33">pixel perfect design</p>
+            <p class="text-34">
+              Nunc mattis lorem in leo lobortis, ut venenatis justo commodo.
+              Maecenas a justo nec velit egestas fermentum.
+            </p>
+          </div>
+          <div class="service-item service-item-6">
+            <img
+              class="mobile service-icon"
+              src="images/mobile.png"
+              alt=""
+              width="30"
+              height="48"
+            />
+            <p class="text-33">responsive display</p>
+            <p class="text-34">
+              Nunc mattis lorem in leo lobortis, ut venenatis justo commodo.
+              Maecenas a justo nec velit egestas fermentum.
+            </p>
+          </div>
+          <div class="service-item service-item-7">
+            <img
+              class="clock service-icon"
+              src="images/clock.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+            <p class="text-33">24/7 support</p>
+            <p class="text-34">
+              Nunc mattis lorem in leo lobortis, ut venenatis justo commodo.
+              Maecenas a justo nec velit egestas fermentum.
+            </p>
+          </div>
+          <div class="service-item service-item-8">
+            <img
+              class="mobile-copy service-icon"
+              src="images/mobile.png"
+              alt=""
+              width="30"
+              height="48"
+            />
+            <p class="text-33">responsive display</p>
+            <p class="text-34">
+              Nunc mattis lorem in leo lobortis, ut venenatis justo commodo.
+              Maecenas a justo nec velit egestas fermentum.
+            </p>
+          </div>
+          <div class="service-item service-item-9">
+            <img
+              class="clock-copy service-icon"
+              src="images/clock.png"
+              alt=""
+              width="48"
+              height="48"
+            />
+            <p class="text-33">24/7 support</p>
+            <p class="text-34">
+              Nunc mattis lorem in leo lobortis, ut venenatis justo commodo.
+              Maecenas a justo nec velit egestas fermentum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- What we do end -->
+
+    <!-- Features -->
+    <div class="parent-features-1" id="features">
+      <div class="features-2">
+        <div class="section-title-2 group">
+          <div class="border-left-2"></div>
+          <p class="features-3 text">FEATURES.</p>
+        </div>
+        <div class="row">
+          <div class="post-item">
+            <img class="base-4" src="images/feature-1.png" alt="" />
+            <div class="post-title">Product Design: Eames Chairs</div>
+            <div class="post-desc">
+              Eames designs are certainly iconic. Everyone of us know at least
+              two or three of their famous chairs. I would even risk saying that
+              most of us dream about having a nice Eames.
+            </div>
+          </div>
+          <div class="post-item">
+            <img class="base-5" src="images/feature-2.png" alt="" />
+            <div class="post-title">Elegant and Colorful Logos</div>
+            <div class="post-desc">
+              I’ve always found logo design to be one of the most challenging
+              things to get right. There’s so much that a logo can say about a
+              brand without actually saying it.
+            </div>
+          </div>
+          <div class="post-item">
+            <img class="base-6" src="images/feature-3.png" alt="" />
+            <div class="post-title">A Showcase of Creative</div>
+            <div class="post-desc">
+              It’s always interesting to see another designer’s take on a famous
+              website, app or even physical product. Different designers add
+              their own personality and style.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-2" id="contact">
+      <div class="section-title-2 group contact-title">
+        <div class="border-left-2"></div>
+        <p class="text-13">stay in touch.</p>
+      </div>
+      <div class="base-7" id="map"></div>
+      <div class="wrapper-3">
+        <div class="contact-form">
+          <div class="row-3 match-height group">
+            <div class="name">
+              <p class="text-label">Your Name</p>
+              <div class="bg-6"></div>
+            </div>
+            <div class="email">
+              <p class="text-label">Your email</p>
+              <div class="bg-6"></div>
+            </div>
+          </div>
+          <div class="message group">
+            <p class="text-label">Your message</p>
+            <div class="bg-8"></div>
+          </div>
+          <div class="send-message">send message</div>
+        </div>
+
+        <div class="contact-information">
+          <p class="text-60">contact information</p>
+          <p class="text-61">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi
+            metus, tristique nec dolor non, ornare sagittis dolor. Nulla
+            vestibulum lacus sed molestie gravida. <br /><span
+              class="text-style"
+              >&nbsp;</span
+            ><br />Cras fermentum elit quis magna congue,
+            <strong class="fw700">vel sodales</strong> arcu vestibulum. Nunc
+            lobortis dui magna, quis dapibus lacus
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-2">
+        <div class="copyright">
+          © Copyright 2014 by PSD Booster. All Rights Reserved.
+        </div>
+        <img
+          class="lfhei"
+          src="images/LFHEI.png"
+          alt="LFHEI"
+          width="155"
+          height="18"
+          title="LFHEI"
+        />
+      </div>
+    </footer>
+  </body>
+</html>
