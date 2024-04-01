@@ -26,11 +26,6 @@ listItems.forEach((item) => {
   });
 });
 
-function toggleMenu() {
-  var headerItemsList = document.getElementById("headerItemsList");
-  headerItemsList.classList.toggle("active");
-}
-
 function activateListItem(element) {
   var listItems = document.querySelectorAll(".header__item a");
   listItems.forEach((item) => item.classList.remove("active"));
@@ -68,16 +63,8 @@ if (navigator.geolocation) {
 
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-window.onscroll = function () {
-  scrollFunction();
-};
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollTopBtn.classList.add("show");
-  } else {
-    scrollTopBtn.classList.remove("show");
-  }
-}
 scrollTopBtn.addEventListener("click", function () {
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  const homeListItem = document.querySelector('a[href="#home"]');
+  activateListItem(homeListItem);
+  document.documentElement.scrollTop = 0;
 });

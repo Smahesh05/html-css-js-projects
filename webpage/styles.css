@@ -137,14 +137,27 @@ ul li a {
     cursor: pointer;
   }
 
-  .header__items_list {
+  body.disabled {
+    overflow: hidden;
+  }
+
+  .close-menu.hide {
     display: none;
-    flex-direction: column;
+  }
+
+  .header__items_list.show {
+    left: 0%;
+  }
+
+  .header__items_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Adjust for smaller screens */
     position: fixed;
-    top: 0;
+    top: 80px;
     left: -100%;
-    width: 80%;
-    max-width: 300px;
+    width: 80%; /* Adjust width for smaller screens */
+    max-width: 300px; /* Adjust max-width for smaller screens */
     height: 100%;
     overflow-y: auto;
     background-color: #1d2126;
