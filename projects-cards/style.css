@@ -31,6 +31,37 @@ body {
   border-radius: 8px;
   margin-bottom: 15px;
 }
+
+.screen {
+  overflow: hidden;
+  height: 200px;
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.screen img {
+  bottom: -610px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: top 11s;
+  -moz-transition: top 11s;
+  -ms-transition: top 11s;
+  -o-transition: top 11s;
+  transition: bottom 11s;
+}
+.screen:hover img {
+  bottom: 0;
+  -webkit-transition: all 11s;
+  -moz-transition: all 11s;
+  -ms-transition: all 11s;
+  -o-transition: all 11s;
+  transition: all 11s;
+}
 /* Description */
 .card-description {
   margin-bottom: 15px;
